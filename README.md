@@ -5,11 +5,10 @@ Hi! I made this script because i wanted to see how will ZTF images look when vie
 
 A simple script to search for and download ZTF frames from the IPAC archive, convert them to TIFF, and standardize their sizes for stacking.
 
-## Installation
+## Installation [no requirements.txt yet! I am going to add it soon]
 1. Clone this repository and install dependencies:
    ```
    bash pip install -r requirements.txt
-
 2. Ensure you have Python 3, PIL (Pillow), Astropy, Requests, Pandas, and NumPy available in your environment. 
 
 ## Usage
