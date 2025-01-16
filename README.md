@@ -1,5 +1,5 @@
 # EARLY VERSION TO BE IMPROVED! 
-#Bulk-Zwicky-Transient-Facility-Downloader
+# Bulk-Zwicky-Transient-Facility-Downloader
 
 Hi! I made this script because i wanted to see how will ZTF images look when viewed as stacked RGBs, i will add here more of the story and new features for now i am adding this repo so i won't forget to post it.
 
@@ -9,7 +9,7 @@ A simple script to search for and download ZTF frames from the IPAC archive, con
 1. Clone this repository and install dependencies:
    ```
    bash pip install -r requirements.txt
-  '''
+
 2. Ensure you have Python 3, PIL (Pillow), Astropy, Requests, Pandas, and NumPy available in your environment. 
 
 ## Usage
