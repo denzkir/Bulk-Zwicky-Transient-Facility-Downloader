@@ -1,13 +1,9 @@
-#### ZTF_bulk_downloader v1.0
+#### ZBulk Zwicky Transient Facility Frames Downloader v1.1
 '''
-Github description:
 This script downloads ZTF frames from the IPAC archive and converts them to TIFF format
 It also standardizes the image sizes to a square shape as some of the stacking software requires all images to be the same size (e.g. DeepSkyStacker)
 The script uses the astropy and PIL libraries to convert the FITS files to TIFF
 
-It's first version that went public i will be updating it with more features and better code
-
-Attributions: [to be expanded]
 This script was created by user "MandelbrotEnjoyer"
 Frames are provided by IPAC archive
 Libraries used: requests, re, os, glob, sys, PIL, astropy, numpy, pandas
@@ -24,17 +20,17 @@ import pandas as pd
 
 # Search criteria
 suffix = 'sciimg.fits'  # Replace with desired suffix based on your needs, sciimg.fits is the science image
-filtercode = 'zr'  # 'ZG' or 'ZR' or 'ZI'
+filtercode = 'zr'  # Specify the filter code 'zg' or 'zr' or 'zi' 
 seeing = "<2" # specify the seeing limit [TO BE IMPLEMENTED]
-maglimit = "19"  # (more than) specify magnitude limit
-coords = "65.4868657 +19.5339984"  # specify the coordinates of your object in ra and dec 
+maglimit = "19"  # (more than) Specify magnitude limit
+coords = "65.4868657 +19.5339984"  # Specify the coordinates of your object in RA and DEC in J2000d format 
 radius = "0.001"  # specify the radius of the search in degrees
-limitAmount = 3  # specify the amount of images to download, set 0 to download all images
+limitAmount = 0  # specify the amount of images to download, set 0 to download all images
 expTime = "30"  # specify the exposure time 300 or 30
-image_size = "620"  # specify the size of the image in arcsec [ZTF scale is approx 1 arcsec/pixel]
+image_size = "600"  # specify the size of the image in arcsec [ZTF scale is approx 1 arcsec/pixel]
 ignore_download = False # set to True to ignore downloading frames
 
-standarize_image_sizes = 600 # set to edge length of the square image you want to create. set to 0 to disable [less than image_size]
+standarize_image_sizes = 550 # set to edge length of the square image you want to create. set to 0 to disable [less than image_size]
 
 def frames_list_lookup(ra, dec, radius):
     filtercode_list = []
@@ -76,7 +72,6 @@ def frames_list_lookup(ra, dec, radius):
                 print("index error, skipping row")
 
         print(f'Found {len(filtercode_list)} frames')
-        # how much frames for a filtercode 
         print("ZG: " + str(filtercode_list.count("zg")))
         print("ZR: " + str(filtercode_list.count("zr")))
         print("ZI: " + str(filtercode_list.count("zi")))
@@ -87,10 +82,8 @@ def frames_list_lookup(ra, dec, radius):
         return None
 
 ### Script start ###
-ra, dec = coords.split()  # Splitting the coords string into ra and dec
-
+ra, dec = coords.split()
 filtercode_list, exptime_list, filefracday_list, seeing_list, airmass_list, maglimit_list, ccdid_list, qid_list, imgtypecode_list, field_list = frames_list_lookup(ra, dec, radius)
-
 downloadedFrames = 0
 for i in range(0, len(filefracday_list)):
     if limitAmount != 0 and downloadedFrames == limitAmount or ignore_download == True:
