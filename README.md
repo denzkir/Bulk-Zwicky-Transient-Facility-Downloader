@@ -1,7 +1,7 @@
 # Bulk Zwicky Transient Facility Frames Downloader 
-## A simple script to search for and download ZTF frames from the IPAC archive, convert them to TIFF, and standardize their sizes for stacking.
+### A simple script to search for and download ZTF frames from the IPAC archive, convert them to TIFF, and standardize their sizes for stacking.
 
-## I have always wondered what ZTF images would look like when stacked in each separate ZTF filter: Sloan g', Sloan r', Sloan i', and then converted to RGB. For this task, I needed a way to list all images ZTF have produced for a part of the sky, download them, cut them to the same size, and do all of it with a selection of parameters such as exposure time, magnitude limit, etc. So here it is, along with a gallery section below if you want to see images I produced with this script.
+### I have always wondered what ZTF images would look like when stacked in each separate ZTF filter: Sloan g', Sloan r', Sloan i', and then converted to RGB. For this task, I needed a way to list all images ZTF have produced for a part of the sky, download them, cut them to the same size, and do all of it with a selection of parameters such as exposure time, magnitude limit, etc. So here it is, along with a gallery section below if you want to see images I produced with this script.
 
 ## Features
 
